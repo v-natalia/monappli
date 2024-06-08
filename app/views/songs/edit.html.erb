@@ -1,0 +1,10 @@
+<h2>Edit song</h2>
+<%= form_for @song do |f| %>
+  <%= f.text_field :title %>
+  <%= f.submit %>
+<% end %>
+
+
+<% @song.reviews.each do |review| %>
+<p><%= review.content %><p>
+<% end %>
